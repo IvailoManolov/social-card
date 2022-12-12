@@ -1,0 +1,137 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family:'popins';
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: linear-gradient(30deg,whitesmoke,gray);
+}
+
+.card{
+    position: relative;
+    width: 350px;
+    height: 200px;
+    border-radius: 20px;
+    background: whitesmoke;
+    box-shadow: 0 20px 60px rgba(0,0,0,0.15);
+    transition: 0.4s;
+}
+
+.card:hover{
+    height: 450px;
+}
+
+.image_container{
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: -50px;
+    width: 150px;
+    height: 150px;
+    background: black;
+    border-radius: 50%;
+    overflow: hidden;
+    transition: 0.4s;
+    box-shadow: 0 10px 55px rgba(0,0,0,0.15);
+}
+
+.card:hover .image_container{
+    width: 250px;
+    height: 250px;
+}
+
+.card:hover .details{
+    transform: translateY(0);
+}
+
+.image_container img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.content{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    overflow: hidden;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+.details{
+    padding: 50px;
+    text-align: center;
+    width: 100%;
+    transition: 0.5s;
+    transform: translateY(150px);
+}
+
+.details h2{
+    font-size: 1.5em;
+    font-weight: 700;
+    color: gray;
+    line-height: 1.2em;
+}
+
+.details h2 span{
+    font-size: 0.8em;
+    font-weight: 500;
+    opacity: 0.5s;
+}
+
+.data{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 10px 0;
+}
+
+.data h3{
+    font-size: 1em;
+    color: gray;
+    line-height: 1.2em;
+    font-weight: 600;
+}
+
+.data h3 span{
+    font-size: 0.8em;
+    font-weight: 500;
+    opacity: 0.5s;
+}
+
+.action_buttons{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.action_buttons button{
+    margin-top: 5px;
+    padding: 10px 30px;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+    font-size: 1em;
+    font-weight: 600;
+    background: green;
+    color: whitesmoke;
+    cursor: pointer;
+}
+
+.action_buttons button:nth-child(2)
+{
+    border: 0.3px solid gray;
+    color: gray;
+    background: whitesmoke;
+}
